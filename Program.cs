@@ -42,6 +42,21 @@ namespace DailyCodeKata
 
             Console.WriteLine(reversedWords);
             return reversedWords;
+
+            //Split on spaces
+            //For each word, create a new word by treating the input as a sequence of characters, reverse that sequence, turn the result into an array, and then call the string(char[]) constructor
+            //Depending on framework version, call ToArray() on the string sequence, as .NET 4 has more overloads available
+            //Call string.Join on the result to put the reversed words back together again.
+        }
+
+
+        public static int[] SortNumbers(int[] nums)
+        {
+            if (nums == null)
+                nums = new int[0];
+
+            Array.Sort(nums);
+            return nums;
         }
 
 
