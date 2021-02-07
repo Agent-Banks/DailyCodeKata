@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace DailyCodeKata
 {
@@ -19,11 +20,29 @@ namespace DailyCodeKata
             return result;
         }
 
+        public static string ReversedString(string str)
+        {
+            char[] stringArray = str.ToCharArray();
+            string reverse = String.Empty;
+            for (int i = stringArray.Length - 1; i >= 0; i--)
+            {
+                reverse += stringArray[i];
+            }
+            Console.WriteLine(reverse);
+            return reverse;
+
+        }
+
+
+
+
         static void Main(string[] args)
         {
             DisplayGreeting();
 
             Console.WriteLine();
+
+            ReversedString("Hello there!");
 
         }
     }
