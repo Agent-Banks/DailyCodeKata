@@ -59,6 +59,11 @@ namespace DailyCodeKata
             return nums;
         }
 
+        public static int[] NoOdds(int[] values)
+        {
+            return values.Where(x => x % 2 == 0).ToArray();
+        }
+
 
 
         static void Main(string[] args)
