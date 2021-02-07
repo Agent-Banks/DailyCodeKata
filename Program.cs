@@ -34,6 +34,16 @@ namespace DailyCodeKata
         }
 
 
+        public static string ReversedWordsInString(string str)
+        {
+            var reversedWords = string.Join(" ",
+            str.Split(' ')
+            .Select(x => new String(x.Reverse().ToArray())));
+
+            Console.WriteLine(reversedWords);
+            return reversedWords;
+        }
+
 
 
         static void Main(string[] args)
@@ -43,6 +53,8 @@ namespace DailyCodeKata
             Console.WriteLine();
 
             ReversedString("Hello there!");
+
+            ReversedWordsInString("Whats Up My Dude");
 
         }
     }
