@@ -82,6 +82,21 @@ namespace DailyCodeKata
             }
         }
 
+        public static int Find(int[] integers)
+        {
+            var countOfEvens = integers.Count(n => n % 2 == 0);
+            var countOfOdds = integers.Count(n => n % 2 == 1);
+
+            if (countOfEvens > countOfOdds)
+            {
+                return integers.First(n => n % 2 == 1);
+            }
+            else
+            {
+                return integers.First(n => n % 2 == 0);
+            }
+        }
+
 
         static void Main(string[] args)
         {
