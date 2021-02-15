@@ -64,6 +64,23 @@ namespace DailyCodeKata
             return values.Where(x => x % 2 == 0).ToArray();
         }
 
+        public static string GetMiddle(string s)
+        {
+            var stringLength = s.Length;
+            int middle = stringLength / 2;
+            var middleChar = s[middle];
+
+            if (stringLength % 2 != 0)
+            {
+                Console.WriteLine(Char.ToString(middleChar));
+                return Char.ToString(middleChar);
+
+            }
+            else
+            {
+                return s.Substring(middle - 1, +2);
+            }
+        }
 
 
         static void Main(string[] args)
@@ -75,6 +92,8 @@ namespace DailyCodeKata
             ReversedString("Hello there!");
 
             ReversedWordsInString("Whats Up My Dude");
+
+            GetMiddle("Heyo");
 
         }
     }
