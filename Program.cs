@@ -98,6 +98,15 @@ namespace DailyCodeKata
         }
 
 
+        public static string Remove_char(string s)
+        {
+            var removedFirstChar = s.Substring(1);
+            return removedFirstChar.Remove(removedFirstChar.Length - 1, 1);
+
+
+        }
+
+
         static void Main(string[] args)
         {
             DisplayGreeting();
@@ -109,6 +118,8 @@ namespace DailyCodeKata
             ReversedWordsInString("Whats Up My Dude");
 
             GetMiddle("Heyo");
+
+            Remove_char("Hey there");
 
         }
     }
