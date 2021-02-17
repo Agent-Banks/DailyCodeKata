@@ -106,6 +106,13 @@ namespace DailyCodeKata
 
         }
 
+        public static int sumTwoSmallestNumbers(int[] numbers)
+        {
+
+            Array.Sort(numbers);
+            return numbers[0] + numbers[1];
+        }
+
 
         static void Main(string[] args)
         {
@@ -120,6 +127,7 @@ namespace DailyCodeKata
             GetMiddle("Heyo");
 
             Remove_char("Hey there");
+
 
         }
     }
