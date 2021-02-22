@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DailyCodeKata
@@ -114,6 +115,17 @@ namespace DailyCodeKata
         }
 
 
+        public static List<int> RemoveSmallest(List<int> numbers)
+        {
+
+            if (numbers.Count > 0)
+            {
+                numbers.Remove(numbers.Min());
+            }
+
+            return numbers;
+        }
+
         static void Main(string[] args)
         {
             DisplayGreeting();
@@ -127,6 +139,8 @@ namespace DailyCodeKata
             GetMiddle("Heyo");
 
             Remove_char("Hey there");
+
+
 
 
         }
